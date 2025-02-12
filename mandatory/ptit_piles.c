@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:20 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/11 12:15:04 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:23:11 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,8 @@ void case_ptit_piles(t_noeud **a)
         sa(a, false);
     else if(pile_taile(*a) == 3)
         trier_trois(a);
+    // else if (pile_taile(*a) == 4)
+    //     trier_quatre(a);
+    // else if (pile_taile(*a) == 5)
+    //     trier_cinq(a);
 }

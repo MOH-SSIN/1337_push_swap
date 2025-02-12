@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:51 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:14:51 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:21:41 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void Parse_ArgEnd_Init_a(t_noeud **a, t_noeud **b, char **args)
         i++;
     }
     *a = ajouter_noeud(args, true);
-    if (pile_taile(*a) <= 3)
+    if (pile_taile(*a) <= 5)
         case_ptit_piles(a);
     else
         case_grand_pile(a,b);
