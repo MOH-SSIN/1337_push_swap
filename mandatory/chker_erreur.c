@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:51 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/11 18:46:50 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:14:51 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void Parse_ArgEnd_Init_a(t_noeud **a, t_noeud **b, char **args)
 
     nombre = 0;
     i = 0;
-    if (!args || !args[i])// hna fach kndire "   " ou "" normalemt split 4ada t5rje liya pointeure null hdi dartha bach nhadli hde cas !!!
+    if (!args || !args[i])
             liberer_erreurs_2(args, true);
     while (args[i])
     {

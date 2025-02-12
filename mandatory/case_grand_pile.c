@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:46 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 17:37:28 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:14:47 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void push_non_list(t_noeud **a, t_noeud**b)
     }
 }
 
-t_noeud *ft_Get_PtitdNode(t_noeud *a)//5asni ndirha machi statick
+t_noeud *ft_Get_PtitdNode(t_noeud *a)
 {
     t_noeud *ptit_valeur;
     
@@ -86,39 +86,3 @@ void case_grand_pile(t_noeud **a,t_noeud **b)
         while (*a != ptit)
             rra(a, false);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // while (*b)
-    // {
-    //     init_pile(*a ,*b);
-    //     move_b_vers_a(a, b);
-    // }
-    // set_index(*a);// kina f fichier case_grand_pile
-    // ptit = ft_Get_PtitdNode(*a);
-    // if (ptit->au_dessus_median)
-    //     while (*a != ptit)
-    //         ra(a, false);
-    // else
-    //     while (*a != ptit)
-    //         rra(a, false);

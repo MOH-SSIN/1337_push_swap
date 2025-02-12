@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cheker_utils.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/12 18:16:44 by mez-zahi          #+#    #+#             */
+/*   Updated: 2025/02/12 18:16:45 by mez-zahi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "checker.h"
 
 
@@ -24,7 +36,7 @@ t_noeud *ft_check_creat(t_noeud **a, char **args)
 
     nombre = 0;
     i = 0;
-    if (!args || !args[i])// hna fach kndire "   " ou "" normalemt split 4ada t5rje liya pointeure null hdi dartha bach nhadli hde cas !!!
+    if (!args || !args[i])
             liberer_erreurs_bonus(args);
     while (args[i])
     {

@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:27 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/11 12:15:06 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:15:38 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int pile_trie(t_noeud *a)
         return (1);
     while (a->suivant)
     {
-        if (a->valeur > a->suivant->valeur)// ila kan element kbare mn element li ba3do
+        if (a->valeur > a->suivant->valeur)
             return (0);
         a = a->suivant; 
     }

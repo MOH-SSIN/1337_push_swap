@@ -6,7 +6,7 @@
 #    By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/08 14:30:14 by mez-zahi          #+#    #+#              #
-#    Updated: 2025/02/12 18:07:42 by mez-zahi         ###   ########.fr        #
+#    Updated: 2025/02/12 18:14:32 by mez-zahi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ RM = rm -rf
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS = mandatory/afficher_pile.c mandatory/case_grand_pile.c mandatory/chker_erreur.c mandatory/concat_arg.c \
+SRCS =  mandatory/case_grand_pile.c mandatory/chker_erreur.c mandatory/concat_arg.c \
 		mandatory/creat_pile.c  mandatory/free.c mandatory/init_pile.c mandatory/lis.c mandatory/move_pile.c \
 		mandatory/ptit_piles.c mandatory/push_swap_utils.c mandatory/push_swap.c
 
@@ -29,7 +29,7 @@ SRCS_BONUS = bonus/checker.c bonus/cheker_utils.c bonus/ft_get_next_line_utlis.c
 
 SRCS_OPERATION = operation/push.c operation/rotate.c operation/rrotate.c operation/swap.c
 
-SRCS_COMMUN = mandatory/afficher_pile.c mandatory/case_grand_pile.c mandatory/chker_erreur.c mandatory/concat_arg.c \
+SRCS_COMMUN =  mandatory/case_grand_pile.c mandatory/chker_erreur.c mandatory/concat_arg.c \
 		mandatory/creat_pile.c  mandatory/free.c mandatory/init_pile.c mandatory/lis.c mandatory/move_pile.c \
 		mandatory/ptit_piles.c mandatory/push_swap_utils.c
 

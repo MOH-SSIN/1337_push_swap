@@ -6,21 +6,14 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:30:11 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 14:59:00 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:15:46 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-
-// void ft_mohcine()
-// {
-//     system("leaks push_swap");
-// }
-
 int main(int argc, char **argv)
 {
-    // atexit(ft_mohcine);
     t_noeud *a;
     t_noeud *b;
 
@@ -46,8 +39,6 @@ int main(int argc, char **argv)
         args = concat_arg(argc, argv);
     }
     Parse_ArgEnd_Init_a(&a, &b, args);
-    // atexit(ft_mohcine);
     free_piles(a, b);
-    // sleep(10);
     return (0);
 }
