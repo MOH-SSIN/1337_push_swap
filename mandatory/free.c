@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:01 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 14:03:13 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 16:54:52 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,10 @@ void liberer_erreurs_2(char **split, bool droit)
 {
 	int i;
 	
+	// if (!split)// hde cas 5sni nswlw 3liha ok
+	// 	exit(0);
 	i = 0;
-	while (split[i])
+	while (split && split[i])
 		free(split[i++]);
 	free(split);
 	if (droit)

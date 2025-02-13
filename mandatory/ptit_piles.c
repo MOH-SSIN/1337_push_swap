@@ -6,12 +6,11 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:20 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 13:56:54 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:36:33 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
 
 static void	trier_trois(t_noeud **a)
 {
