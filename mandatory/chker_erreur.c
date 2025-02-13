@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:51 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 13:59:00 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:31:10 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int verfier_doubl(char **str, int nbr)
         return (1);
 }
 
-void Parse_argEnd_Init_a(t_noeud **a, t_noeud **b, char **args)
+void Parse_ArgEnd_Init_a(t_noeud **a, t_noeud **b, char **args)
 {
     int     i;
     long    nombre;
