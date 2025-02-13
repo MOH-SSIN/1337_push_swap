@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:37 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/11 12:08:38 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:11:42 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void swap(t_noeud **pile)
     last->precedent = NULL; 
     last->suivant = first;
 
-    if(first->suivant)// ca ila kan troisieme element
+    if(first->suivant)
         first->suivant->precedent = first;
     *pile = last;
     set_index(*pile);

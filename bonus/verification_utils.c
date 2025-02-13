@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:16:31 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:16:32 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:15:26 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ int verfier_doubl_bonus(char **str, int nbr)
 
 void liberer_erreurs_bonus(char **split)
 {
-    int i = 0;
+    int i;
+
+    i = 0;
 	while (split[i])
 		free(split[i++]);
 	free(split);

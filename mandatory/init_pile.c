@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:05 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/11 12:14:55 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:48:05 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void    set_target_node(t_noeud *a, t_noeud *b)
     }
 }
 
-static void    set_abov_medlan(t_noeud *list)
+void    set_abov_medlan(t_noeud *list)
 {
     int len;
     t_noeud *head;

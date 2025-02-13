@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:16:44 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:16:45 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:13:51 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,21 @@ t_noeud *ft_check_creat(t_noeud **a, char **args)
     return (*a);
 }
 
+static void ft_print_free(char *commande)
+{
+    write(2, "Error\n", 6);
+    free(commande);
+    exit(1);
+}
+
+static void run_pa_pb(char *commande, t_noeud **a, t_noeud **b)
+{
+    if (ft_strcmp(commande, "pa\n") == 0)
+        pa(a, b, true);
+    else if (ft_strcmp(commande, "pb\n") == 0)
+        pb(a, b, true);
+}
+
 void run_command(char *commande, t_noeud **a, t_noeud **b)
 {
     if (!commande)
@@ -63,10 +78,8 @@ void run_command(char *commande, t_noeud **a, t_noeud **b)
         sb(b, true);
     else if (ft_strcmp(commande, "ss\n") == 0)
         ss(a, b, true);
-    else if (ft_strcmp(commande, "pa\n") == 0)
-        pa(a, b, true);
-    else if (ft_strcmp(commande, "pb\n") == 0)
-        pb(a, b, true);
+    else if (ft_strcmp(commande, "pa\n") == 0 || ft_strcmp(commande, "pb\n") == 0)
+        run_pa_pb(commande, a, b);
     else if (ft_strcmp(commande, "ra\n") == 0)
         ra(a, true);
     else if (ft_strcmp(commande, "rb\n") == 0)
@@ -80,9 +93,5 @@ void run_command(char *commande, t_noeud **a, t_noeud **b)
     else if (ft_strcmp(commande, "rrr\n") == 0)
         rrr(a, b, false);
     else
-    {
-        write(2, "Error\n", 6);
-        free(commande);
-        exit(1);
-    }
+        ft_print_free(commande);
 }

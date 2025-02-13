@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:13 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/11 12:15:00 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:07:42 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,3 @@ void move_b_vers_a(t_noeud **a, t_noeud **b)
     rest_rotation_a(a, cheapest->noeud_cible);
     pa(a, b, false);
 }
-
-

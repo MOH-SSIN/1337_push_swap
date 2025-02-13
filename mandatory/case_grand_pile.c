@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:46 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:14:47 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:57:17 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,6 @@ void push_non_list(t_noeud **a, t_noeud**b)
             pb(a, b, false);
         tmp = (tmp)->suivant;
     }
-}
-
-t_noeud *ft_Get_PtitdNode(t_noeud *a)
-{
-    t_noeud *ptit_valeur;
-    
-    if (!a)
-        return (NULL);
-    ptit_valeur = a;
-    while (a)
-    {
-        if (a->valeur < ptit_valeur->valeur)
-            ptit_valeur = a;
-        a =a->suivant;
-    }
-    return (ptit_valeur);
 }
 
 void	set_index(t_noeud *pile)

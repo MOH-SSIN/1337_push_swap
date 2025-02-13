@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:30:09 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:18:06 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:49:22 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,9 @@ void afficher_sub_ptr(t_noeud *pile);
 
 int pile_taile(t_noeud *a);
 int pile_trie(t_noeud *a);
+int pile_trie_enreverse(t_noeud *a);
+t_noeud *ft_Get_PtitdNode(t_noeud *a);
+t_noeud *ft_grand_element(t_noeud *a);
 
 
 void	fr_single(char **s1, char **s2);
@@ -70,7 +73,7 @@ void liberer_erreurs(char **split);
 void free_pile(t_noeud *pile);
 void free_piles(t_noeud *a, t_noeud *b);
 
-void case_ptit_piles(t_noeud **a);
+void case_ptit_piles(t_noeud **a, t_noeud **b);
 
 void case_grand_pile(t_noeud **a, t_noeud **b);
 void	set_index(t_noeud *pile);
@@ -81,6 +84,8 @@ void push_non_list(t_noeud **a, t_noeud**b);
 t_noeud *ft_Get_PtitdNode(t_noeud *a); 
 
 void init_pile(t_noeud **a, t_noeud **b);
+void    set_abov_medlan(t_noeud *list);
+
 void move_b_vers_a(t_noeud **a, t_noeud **b);
 
 

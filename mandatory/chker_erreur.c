@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:51 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:21:41 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:59:00 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 int ft_vide_space(char *str)
 {
-    int i = 0;
+    int i;
+
+    i = 0;
     while (str[i] != '\0')
     {
         if (str[i] != ' ')
@@ -64,7 +66,7 @@ static int verfier_doubl(char **str, int nbr)
         return (1);
 }
 
-void Parse_ArgEnd_Init_a(t_noeud **a, t_noeud **b, char **args)
+void Parse_argEnd_Init_a(t_noeud **a, t_noeud **b, char **args)
 {
     int     i;
     long    nombre;
@@ -86,7 +88,7 @@ void Parse_ArgEnd_Init_a(t_noeud **a, t_noeud **b, char **args)
     }
     *a = ajouter_noeud(args, true);
     if (pile_taile(*a) <= 5)
-        case_ptit_piles(a);
+        case_ptit_piles(a, b);
     else
         case_grand_pile(a,b);
 }

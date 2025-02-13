@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:01 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:15:17 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:03:13 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ void	fr_single(char **s1, char **s2)
 
 void liberer_erreurs(char **split)
 {
-	 int i = 0;
+	int i;
+
+	i = 0;
 	while (split[i])
 		free(split[i++]);
 	free(split);
@@ -36,7 +38,9 @@ void liberer_erreurs(char **split)
 
 void liberer_erreurs_2(char **split, bool droit)
 {
-	 int i = 0;
+	int i;
+	
+	i = 0;
 	while (split[i])
 		free(split[i++]);
 	free(split);
@@ -52,6 +56,7 @@ void liberer_erreurs_2(char **split, bool droit)
 void free_pile(t_noeud *pile)
 {
     t_noeud *temp;
+
     if(!pile)
         return ;
     while (pile)

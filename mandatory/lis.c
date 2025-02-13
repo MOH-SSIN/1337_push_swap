@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:09 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 16:49:15 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:07:04 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static t_noeud *ft_Get_MaxNoueud_Length(t_noeud *a)
 {
-    t_noeud * max_node;
+    t_noeud * max_node; 
     int     max_length;;
 
     max_node = a;
