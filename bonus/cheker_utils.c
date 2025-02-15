@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:16:44 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 14:13:51 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:15:15 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ void run_command(char *commande, t_noeud **a, t_noeud **b)
         sb(b, true);
     else if (ft_strcmp(commande, "ss\n") == 0)
         ss(a, b, true);
-    else if (ft_strcmp(commande, "pa\n") == 0 || ft_strcmp(commande, "pb\n") == 0)
+    else if (ft_strcmp(commande, "pa\n") == 0 
+            || ft_strcmp(commande, "pb\n") == 0)
         run_pa_pb(commande, a, b);
     else if (ft_strcmp(commande, "ra\n") == 0)
         ra(a, true);
