@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:16:44 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/15 12:15:15 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/15 13:43:02 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ t_noeud *ft_check_creat(t_noeud **a, char **args)
             liberer_erreurs_bonus(args);
         i++;
     }
-    *a = ajouter_noeud(args, false);
+    *a = ajouter_noeud(args, false, false);
     return (*a);
 }
 

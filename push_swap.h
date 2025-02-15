@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:30:09 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 13:49:22 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/15 13:47:55 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,10 @@ char	*ft_strjoin(char const *s1, char const *s2);
 t_noeud *lstnew(char *args, int indice);
 t_noeud *lslast(t_noeud *last);
 void lsadd_back(t_noeud **pile, t_noeud *);
-t_noeud *ajouter_noeud(char **args, bool droit);
+t_noeud *ajouter_noeud(char **args, bool droit,bool run_lis);
+// hde droit drtha bach f partie mandatorie une fois liste tkone trie 5asni libre espace o exit f 0 o o5asn ndire liha true
+// ama f bonus rah 5asni n3tiha false 7ite ma5asnich li bre o exit dik sa3a 
+// pour run_list dartha famndatorie dariri ndire true ama f binus 5asni ndire liha false 7ite machi darori ndirha ok 
 void	lstadd_front(t_noeud **lst, t_noeud *new_1);
 
 void afficher_pile(t_noeud *pile);

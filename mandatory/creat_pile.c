@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:57 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:15:04 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/15 13:44:26 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void lsadd_back(t_noeud **pile, t_noeud *new_1)
     }
 }
 
-t_noeud *ajouter_noeud(char **args, bool droit)
+t_noeud *ajouter_noeud(char **args, bool droit, bool run_lis)
 {
     t_noeud *pile;
     int     i;
@@ -76,7 +76,8 @@ t_noeud *ajouter_noeud(char **args, bool droit)
         liberer_erreurs(args);
         exit(0);
     }
-    ft_lis(&pile);
+    if (run_lis)
+        ft_lis(&pile);
     liberer_erreurs(args);
     return (pile);
 }
