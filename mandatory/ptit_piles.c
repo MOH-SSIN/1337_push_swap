@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:20 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 14:36:33 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:17:55 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ static void trier_cinq(t_noeud **a, t_noeud **b)
     t_noeud *min_node;
     int min_pos;
 
-    // Cas où la pile est déjà triée
     if (pile_trie_enreverse(*a))
 	{
 		rra(a, false);
@@ -85,19 +84,14 @@ static void trier_cinq(t_noeud **a, t_noeud **b)
 		trier_quatre(a, b);
 		pa(a, b, false);
 	}
-
-    // 1. Trouver le plus petit élément et sa position
     min_node = ft_Get_PtitdNode(*a);
-    min_pos = get_position(*a, min_node); // Implémenter get_position pour obtenir la position du plus petit élément
-
-    // 2. Si le plus petit est déjà en haut, faire un pb
+    min_pos = get_position(*a, min_node);
     if (min_pos == 0)
     {
         pb(a, b, false);
     }
     else
     {
-        // 3. Si le plus petit est en bas, effectuer rra (rotation inverse)
         if (min_pos == pile_taile(*a) - 1)
         {
             rra(a, false);
@@ -105,7 +99,6 @@ static void trier_cinq(t_noeud **a, t_noeud **b)
         }
         else
         {
-            // 4. Sinon, on fait tourner jusqu'à ce que le plus petit soit en haut
             while (min_pos-- > 0)
                 ra(a, false);
             pb(a, b, false);
