@@ -12,6 +12,11 @@
 
 #include "../push_swap.h"
 
+void mohcine()
+{
+    system("leaks ./push_swap");
+}
+
 int main(int argc, char **argv)
 {
     t_noeud *a;
@@ -39,6 +44,8 @@ int main(int argc, char **argv)
         args = concat_arg(argc, argv);
     }
     Parse_ArgEnd_Init_a(&a, &b, args);
+    // sleep(20);
+    atexit(mohcine);
     free_piles(a, b);
     return (0);
 }

@@ -53,41 +53,104 @@ static void trier_quatre(t_noeud **a, t_noeud **b)
 	pa(a, b, false);
 }
 
-static void	trier_cinq(t_noeud **a, t_noeud **b)
-{
-	t_noeud	*ptit;
-	t_noeud	*tmp;
 
-	if (pile_trie_enreverse(*a))
+static int get_position(t_noeud *a, t_noeud *node)
+{
+    int pos = 0;
+    t_noeud *current = a;
+
+    // Parcours de la pile pour trouver le nœud
+    while (current != NULL)
+    {
+        if (current == node)
+            return pos;  // Retourner la position quand le nœud est trouvé
+        current = current->suivant;
+        pos++;
+    }
+    return -1;  // Si le nœud n'est pas trouvé, on retourne -1
+}
+
+
+
+static void trier_cinq(t_noeud **a, t_noeud **b)
+{
+    t_noeud *min_node;
+    int min_pos;
+
+    // Cas où la pile est déjà triée
+    if (pile_trie_enreverse(*a))
 	{
 		rra(a, false);
 		pb(a, b , false);
 		trier_quatre(a, b);
 		pa(a, b, false);
 	}
-	else
-	{
-        tmp = *a;
-        ptit = ft_Get_PtitdNode(*a);
-	    while (*a != ptit)
-	    {
-		    set_abov_medlan(*a);
-		    if (tmp->au_dessus_median)
-		    {
-			    tmp = tmp->suivant;
-			    ra(a, false);
-		    }
-		    else
-		    {
-			    tmp = tmp->suivant;
-			    rra(a, false);
-		    }
-	}
-	pb(a, b ,false);
-	trier_quatre(a, b);
-	pa(a, b, false);
-	}
+
+    // 1. Trouver le plus petit élément et sa position
+    min_node = ft_Get_PtitdNode(*a);
+    min_pos = get_position(*a, min_node); // Implémenter get_position pour obtenir la position du plus petit élément
+
+    // 2. Si le plus petit est déjà en haut, faire un pb
+    if (min_pos == 0)
+    {
+        pb(a, b, false);
+    }
+    else
+    {
+        // 3. Si le plus petit est en bas, effectuer rra (rotation inverse)
+        if (min_pos == pile_taile(*a) - 1)
+        {
+            rra(a, false);
+            pb(a, b, false);
+        }
+        else
+        {
+            // 4. Sinon, on fait tourner jusqu'à ce que le plus petit soit en haut
+            while (min_pos-- > 0)
+                ra(a, false);
+            pb(a, b, false);
+        }
+    }
+    trier_quatre(a, b);
+    pa(a, b, false);
 }
+
+
+// static void	trier_cinq(t_noeud **a, t_noeud **b)
+// {
+// 	t_noeud	*ptit;
+// 	t_noeud	*tmp;
+
+// 	if (pile_trie_enreverse(*a))
+// 	{
+// 		rra(a, false);
+// 		pb(a, b , false);
+// 		trier_quatre(a, b);
+// 		pa(a, b, false);
+// 	}
+// 	else
+// 	{
+//         tmp = *a;
+//         ptit = ft_Get_PtitdNode(*a);
+// 	    while (*a != ptit)
+// 	    {
+// 		    set_abov_medlan(*a);
+// 		    if (tmp->au_dessus_median)
+// 		    {
+// 			    tmp = tmp->suivant;
+// 			    ra(a, false);
+// 		    }
+// 		    else
+// 		    {
+// 			    tmp = tmp->suivant;
+// 			    rra(a, false);
+// 		    }
+// 	}
+// 	pb(a, b ,false);
+// 	trier_quatre(a, b);
+// 	pa(a, b, false);
+// 	}
+// }
 
 void case_ptit_piles(t_noeud **a, t_noeud **b)
 {

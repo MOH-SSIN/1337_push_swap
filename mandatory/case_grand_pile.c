@@ -23,14 +23,12 @@ static bool is_true(t_noeud *a)
     return (0);
 }
 
-
 void push_non_list(t_noeud **a, t_noeud**b)
 {
     t_noeud *tmp;
 
     while (is_true(*a))
     {
-        set_index(*a);
         tmp = *a;
         if ((tmp)->appartient)
             ra(a, false);
