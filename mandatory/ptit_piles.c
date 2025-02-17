@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:20 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/17 11:17:55 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:22:04 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,15 +59,14 @@ static int get_position(t_noeud *a, t_noeud *node)
     int pos = 0;
     t_noeud *current = a;
 
-    // Parcours de la pile pour trouver le nœud
     while (current != NULL)
     {
         if (current == node)
-            return pos;  // Retourner la position quand le nœud est trouvé
+            return pos;
         current = current->suivant;
         pos++;
     }
-    return -1;  // Si le nœud n'est pas trouvé, on retourne -1
+    return -1;
 }
 
 
