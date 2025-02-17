@@ -68,13 +68,13 @@ static void    set_push_price(t_noeud *a, t_noeud *b)
     len_b = pile_taile(b);
     while (b)
     {
-        b->push_price = b->indice;
-        if (!b->au_dessus_median)
-            b->push_price = len_b - b->indice;
-        if (b->noeud_cible->au_dessus_median)
-            b->push_price += b->noeud_cible->indice;
-        else
-            b->push_price += len_a - b->noeud_cible->indice;
+        // b->push_price = b->indice; // une fois kn7ydha les movmente ki n9so une fois kan5aliha les movmente ki tzado hhh ms kn7ydha o kn9osha m3a implimentation tanya ok
+        // if (!b->au_dessus_median)
+        //     b->push_price = len_b - b->indice;
+        // if (b->noeud_cible->au_dessus_median)
+        //     b->push_price += b->noeud_cible->indice;
+        // else
+        //     b->push_price += len_a - b->noeud_cible->indice;
         //hna li zate
         if (b->au_dessus_median && b->noeud_cible->au_dessus_median)
         {
