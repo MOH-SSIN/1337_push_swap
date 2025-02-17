@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:30:11 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 17:27:29 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:31:18 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int main(int argc, char **argv)
     }
     Parse_ArgEnd_Init_a(&a, &b, args);
     // sleep(20);
-    atexit(mohcine);
     free_piles(a, b);
     return (0);
 }

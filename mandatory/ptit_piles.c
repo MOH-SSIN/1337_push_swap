@@ -6,7 +6,7 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:20 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/17 11:22:04 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:57:46 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,80 +69,29 @@ static int get_position(t_noeud *a, t_noeud *node)
     return -1;
 }
 
-
-
 static void trier_cinq(t_noeud **a, t_noeud **b)
 {
     t_noeud *min_node;
     int min_pos;
 
-    if (pile_trie_enreverse(*a))
-	{
-		rra(a, false);
-		pb(a, b , false);
-		trier_quatre(a, b);
-		pa(a, b, false);
-	}
     min_node = ft_Get_PtitdNode(*a);
     min_pos = get_position(*a, min_node);
-    if (min_pos == 0)
+
+    if (min_pos <= pile_taile(*a) / 2)
     {
-        pb(a, b, false);
+        while (min_pos-- > 0)
+            ra(a, false);
     }
     else
     {
-        if (min_pos == pile_taile(*a) - 1)
-        {
+        while (min_pos++ < pile_taile(*a))
             rra(a, false);
-            pb(a, b, false);
-        }
-        else
-        {
-            while (min_pos-- > 0)
-                ra(a, false);
-            pb(a, b, false);
-        }
     }
+    pb(a, b, false);
     trier_quatre(a, b);
     pa(a, b, false);
 }
 
-
-// static void	trier_cinq(t_noeud **a, t_noeud **b)
-// {
-// 	t_noeud	*ptit;
-// 	t_noeud	*tmp;
-
-// 	if (pile_trie_enreverse(*a))
-// 	{
-// 		rra(a, false);
-// 		pb(a, b , false);
-// 		trier_quatre(a, b);
-// 		pa(a, b, false);
-// 	}
-// 	else
-// 	{
-//         tmp = *a;
-//         ptit = ft_Get_PtitdNode(*a);
-// 	    while (*a != ptit)
-// 	    {
-// 		    set_abov_medlan(*a);
-// 		    if (tmp->au_dessus_median)
-// 		    {
-// 			    tmp = tmp->suivant;
-// 			    ra(a, false);
-// 		    }
-// 		    else
-// 		    {
-// 			    tmp = tmp->suivant;
-// 			    rra(a, false);
-// 		    }
-// 	}
-// 	pb(a, b ,false);
-// 	trier_quatre(a, b);
-// 	pa(a, b, false);
-// 	}
-// }
 
 void case_ptit_piles(t_noeud **a, t_noeud **b)
 {
