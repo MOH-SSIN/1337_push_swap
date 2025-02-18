@@ -6,13 +6,13 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:05 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/17 18:52:05 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/02/18 10:44:08 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void    set_target_node(t_noeud *a, t_noeud *b)
+static void    set_target_node(t_noeud *a, t_noeud *b)//sup
 {
     t_noeud *target_node;
     t_noeud *current_node;
@@ -125,6 +125,7 @@ static void    set_cheapest(t_noeud *b)
         b = b->suivant;
     }
 }
+
 
 void init_pile(t_noeud **a, t_noeud **b)
 {
