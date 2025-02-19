@@ -28,7 +28,6 @@ int ft_strcmp(const char *s1, const char *s2)
 
     return ((unsigned char)*s1 - (unsigned char)*s2);
 }
-
 t_noeud *ft_check_creat(t_noeud **a, char **args)
 {
     int     i;
@@ -37,7 +36,10 @@ t_noeud *ft_check_creat(t_noeud **a, char **args)
     nombre = 0;
     i = 0;
     if (!args || !args[i])
+    {
+        printf("hh\n");
             liberer_erreurs_bonus(args);
+    }
     while (args[i])
     {
         if (verifier_syntaxe_bonus(args[i]) == 1)
