@@ -36,7 +36,7 @@ SRCS_COMMUN =  mandatory/case_grand_pile.c mandatory/chker_erreur.c mandatory/co
 OBJS = $(SRCS:.c=.o) $(SRCS_OPERATION:.c=.o)
 OBJ_BONUS = $(SRCS_BONUS:.c=.o) $(SRCS_OPERATION:.c=.o) $(SRCS_COMMUN:.c=.o)
 
-HEADER = push_swap.h ./libft/libft.h
+HEADER = push_swap.h ./libft/libft.h checker.h
 
 all : $(NAME)
 

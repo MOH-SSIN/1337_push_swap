@@ -22,11 +22,23 @@ char	**concat_arg(int ac, char *av[])
 
 	i = 0;
 	line = ft_strdup("");
+	if (!line)
+		return (NULL);
 	while (++i < ac)
 	{
 		fr_line = line;
 		fr_line2 = ft_strjoin(av[i], " ");
+		if (!line)
+		{
+			free(fr_line);
+			return (NULL);
+		}
 		line = ft_strjoin(fr_line, fr_line2);
+		if (!line)
+		{
+			fr_single(&fr_line, &fr_line2);
+			return (NULL);
+		}
 		fr_single(&fr_line, &fr_line2);
 	}
 	sp = ft_split(line, ' ');

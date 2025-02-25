@@ -39,12 +39,12 @@ void liberer_erreurs(char **split)
 void liberer_erreurs_2(char **split, bool droit)
 {
 	int i;
-	
-	// if (!split)// hde cas 5sni nswlw 3liha ok
-	// 	exit(0);
+
 	i = 0;
 	while (split && split[i])
+	{
 		free(split[i++]);
+	}
 	free(split);
 	if (droit)
 	{

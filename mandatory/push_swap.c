@@ -12,10 +12,10 @@
 
 #include "../push_swap.h"
 
-void mohcine()
-{
-    system("leaks ./push_swap");
-}
+// void mohcine()
+// {
+//     system("leaks ./push_swap");
+// }
 
 int main(int argc, char **argv)
 {
@@ -41,8 +41,8 @@ int main(int argc, char **argv)
                     exit(1);
             }
         }
-        args = concat_arg(argc, argv);
     }
+    args = concat_arg(argc, argv);//deja mprtecter les chose if (!args || !args[i])
     Parse_ArgEnd_Init_a(&a, &b, args);
     free_piles(a, b);
     return (0);
