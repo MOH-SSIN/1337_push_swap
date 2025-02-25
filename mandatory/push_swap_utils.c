@@ -69,16 +69,29 @@ t_noeud *ft_grand_element(t_noeud *a)
 	return (grand_node);
 }
 
-
-int pile_trie(t_noeud *a)
+void mohcine(t_noeud **b, int len_a, int len_b)
 {
-    if (!a || !a->suivant)
-        return (1);
-    while (a->suivant)
+    int inder_a;
+    int inder_b;
+    if ((*b)->au_dessus_median && (*b)->noeud_cible->au_dessus_median)
     {
-        if (a->valeur > a->suivant->valeur)
-            return (0);
-        a = a->suivant; 
+        if ((*b)->indice > (*b)->noeud_cible->indice)
+            (*b)->push_price = (*b)->noeud_cible->indice + ((*b)->indice - (*b)->noeud_cible->indice);
+        else if ((*b)->indice < (*b)->noeud_cible->indice)
+            (*b)->push_price = (*b)->indice + ((*b)->noeud_cible->indice - (*b)->indice);
+        else
+            (*b)->push_price = (*b)->indice;
     }
-    return (1);
+    else if (!(*b)->au_dessus_median && !(*b)->noeud_cible->au_dessus_median)
+    {
+        inder_a = len_a - (*b)->noeud_cible->indice;
+        inder_b = len_b - (*b)->indice;
+
+        if (inder_b > inder_a)
+            (*b)->push_price = inder_a + (inder_b - inder_a);
+        else if (inder_b < inder_a)
+            (*b)->push_price = inder_b + (inder_a - inder_b);
+        else
+            (*b)->push_price = inder_b;
+    }
 }

@@ -20,20 +20,19 @@ RM = rm -rf
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS =  mandatory/case_grand_pile.c mandatory/chker_erreur.c mandatory/concat_arg.c \
-		mandatory/creat_pile.c  mandatory/free.c mandatory/init_pile.c mandatory/lis.c mandatory/move_pile.c \
-		mandatory/ptit_piles.c mandatory/push_swap_utils.c mandatory/push_swap.c
+SRCS =  mandatory/case_grand_pile.c mandatory/chker_erreur.c \
+		mandatory/free.c mandatory/init_pile.c mandatory/move_pile.c \
+		mandatory/ptit_piles.c mandatory/push_swap_utils.c mandatory/push_swap.c\
+
+SRCS_OPERATION = operation/push.c operation/rotate.c operation/rrotate.c operation/swap.c \
+
+SRCS_COMMUN = commun/concat_arg.c commun/creat_pile.c commun/element_comun_1.c\
+			commun/element_comun_2.c commun/lis.c\
 
 SRCS_BONUS = bonus/checker.c bonus/cheker_utils.c bonus/ft_get_next_line_utlis.c bonus/ft_get_next_line.c \
-			bonus/verification_utils.c
+			bonus/verification_utils.c \
 
-SRCS_OPERATION = operation/push.c operation/rotate.c operation/rrotate.c operation/swap.c
-
-SRCS_COMMUN =  mandatory/case_grand_pile.c mandatory/chker_erreur.c mandatory/concat_arg.c \
-		mandatory/creat_pile.c  mandatory/free.c mandatory/init_pile.c mandatory/lis.c mandatory/move_pile.c \
-		mandatory/ptit_piles.c mandatory/push_swap_utils.c
-
-OBJS = $(SRCS:.c=.o) $(SRCS_OPERATION:.c=.o)
+OBJS = $(SRCS:.c=.o) $(SRCS_OPERATION:.c=.o)  $(SRCS_COMMUN:.c=.o)
 OBJ_BONUS = $(SRCS_BONUS:.c=.o) $(SRCS_OPERATION:.c=.o) $(SRCS_COMMUN:.c=.o)
 
 HEADER = push_swap.h ./libft/libft.h checker.h

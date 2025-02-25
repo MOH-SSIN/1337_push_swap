@@ -59,16 +59,17 @@ t_noeud *ajouter_noeud(char **args, bool droit,bool run_lis);
 // hde droit drtha bach f partie mandatorie une fois liste tkone trie 5asni libre espace o exit f 0 o o5asn ndire liha true
 // ama f bonus rah 5asni n3tiha false 7ite ma5asnich li bre o exit dik sa3a 
 // pour run_list dartha famndatorie dariri ndire true ama f binus 5asni ndire liha false 7ite machi darori ndirha ok 
-void	lstadd_front(t_noeud **lst, t_noeud *new_1);
+void    lstadd_front(t_noeud **lst, t_noeud *new_1);
 
-void afficher_pile(t_noeud *pile);
-void afficher_sub_ptr(t_noeud *pile);
+void    afficher_pile(t_noeud *pile);
+void    afficher_sub_ptr(t_noeud *pile);
 
 int pile_taile(t_noeud *a);
 int pile_trie(t_noeud *a);
 int pile_trie_enreverse(t_noeud *a);
 t_noeud *ft_Get_PtitdNode(t_noeud *a);
 t_noeud *ft_grand_element(t_noeud *a);
+void    mohcine(t_noeud **b, int len_a, int len_b);
 
 
 void	fr_single(char **s1, char **s2);
@@ -76,35 +77,34 @@ void liberer_erreurs(char **split);
 void free_pile(t_noeud *pile);
 void free_piles(t_noeud *a, t_noeud *b);
 
-void case_ptit_piles(t_noeud **a, t_noeud **b);
+void    case_ptit_piles(t_noeud **a, t_noeud **b);
 
-void case_grand_pile(t_noeud **a, t_noeud **b);
-void	set_index(t_noeud *pile);
+void    case_grand_pile(t_noeud **a, t_noeud **b);
+void    set_index(t_noeud *pile);
 
-void ft_lis(t_noeud **a);
+void    ft_lis(t_noeud **a);
 
-void push_non_list(t_noeud **a, t_noeud**b);
+void    push_non_list(t_noeud **a, t_noeud**b);
 t_noeud *ft_Get_PtitdNode(t_noeud *a); 
 
-void init_pile(t_noeud **a, t_noeud **b);
+void    init_pile(t_noeud **a, t_noeud **b);
 void    set_abov_medlan(t_noeud *list);
 
-void move_b_vers_a(t_noeud **a, t_noeud **b);
+void    move_b_vers_a(t_noeud **a, t_noeud **b);
 
+void    sa(t_noeud **a , bool afch);
+void    sb(t_noeud **b , bool afch);
+void    ss(t_noeud **a, t_noeud **b, bool afch);
 
-void sa(t_noeud **a , bool afch);
-void sb(t_noeud **b , bool afch);
-void ss(t_noeud **a, t_noeud **b, bool afch);
+void    ra(t_noeud **a, bool afch);
+void    rb(t_noeud **b, bool afch);
+void    rr(t_noeud **a, t_noeud **b, bool afch);
 
-void ra(t_noeud **a, bool afch);
-void rb(t_noeud **b, bool afch);
-void rr(t_noeud **a, t_noeud **b, bool afch);
+void    rra(t_noeud **a, bool afch);
+void    rrb(t_noeud **b, bool afch);
+void    rrr(t_noeud **a, t_noeud **b, bool afch);
 
-void rra(t_noeud **a, bool afch);
-void rrb(t_noeud **b, bool afch);
-void rrr(t_noeud **a, t_noeud **b, bool afch);
-
-void pa(t_noeud **a, t_noeud **b, bool afch);
-void pb(t_noeud **a, t_noeud **b, bool afch);
+void    pa(t_noeud **a, t_noeud **b, bool afch);
+void    pb(t_noeud **a, t_noeud **b, bool afch);
 
 #endif

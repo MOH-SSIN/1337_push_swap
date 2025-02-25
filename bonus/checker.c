@@ -91,10 +91,10 @@ static void	execute_commands(char **commands, t_noeud **a, t_noeud **b)
 	free(commands);
 }
 
-void mh()
-{
-	system("leaks ./checker");
-}
+// void mh()
+// {
+// 	system("leaks ./checker");
+// }
 
 int main(int argc, char **argv)
 {
@@ -117,7 +117,7 @@ int main(int argc, char **argv)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
-	atexit(mh);
+	// atexit(mh);
 	free_piles(a, b);
 	return (0);
 }

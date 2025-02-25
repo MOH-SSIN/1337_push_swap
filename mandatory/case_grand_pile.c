@@ -38,18 +38,6 @@ void push_non_list(t_noeud **a, t_noeud**b)
     }
 }
 
-void	set_index(t_noeud *pile)
-{
-	int i;
-
-    i = -1;
-    while (pile)
-    {
-        pile->indice = ++i;
-        pile = pile->suivant;
-    }
-}
-
 void case_grand_pile(t_noeud **a,t_noeud **b)
 {
     t_noeud *ptit;
