@@ -6,7 +6,7 @@
 #    By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/08 14:30:14 by mez-zahi          #+#    #+#              #
-#    Updated: 2025/02/12 18:14:32 by mez-zahi         ###   ########.fr        #
+#    Updated: 2025/03/10 16:31:18 by mez-zahi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRCS_BONUS = bonus/checker.c bonus/cheker_utils.c bonus/ft_get_next_line_utlis.c
 OBJS = $(SRCS:.c=.o) $(SRCS_OPERATION:.c=.o)  $(SRCS_COMMUN:.c=.o)
 OBJ_BONUS = $(SRCS_BONUS:.c=.o) $(SRCS_OPERATION:.c=.o) $(SRCS_COMMUN:.c=.o)
 
-HEADER = push_swap.h ./libft/libft.h checker.h
+HEADER = push_swap.h ./libft/libft.h bonus/checker.h  commun/commun.h
 
 all : $(NAME)
 

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   element_comun_2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:09:01 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 16:54:52 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/03/11 09:45:30 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "commun.h"
 
 void	fr_single(char **s1, char **s2)
 {
@@ -26,9 +26,9 @@ void	fr_single(char **s1, char **s2)
 	}
 }
 
-void liberer_erreurs(char **split)
+void	liberer_erreurs(char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])
@@ -36,23 +36,22 @@ void liberer_erreurs(char **split)
 	free(split);
 }
 
-
-void free_pile(t_noeud *pile)
+void	free_pile(t_noeud *pile)
 {
-    t_noeud *temp;
+	t_noeud	*temp;
 
-    if(!pile)
-        return ;
-    while (pile)
-    {
-        temp = pile->suivant;
-        free(pile);
-        pile = temp;
-    }
+	if (!pile)
+		return ;
+	while (pile)
+	{
+		temp = pile->suivant;
+		free(pile);
+		pile = temp;
+	}
 }
 
-void free_piles(t_noeud *a, t_noeud *b)
+void	free_piles(t_noeud *a, t_noeud *b)
 {
-    free_pile(a);
-    free_pile(b);
+	free_pile(a);
+	free_pile(b);
 }

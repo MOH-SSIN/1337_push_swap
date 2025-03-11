@@ -3,63 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   verification_utils.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:16:31 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/13 14:15:26 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:34:29 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-
-int verifier_syntaxe_bonus(char *str)
+int	verifier_syntaxe_bonus(char *str)
 {
-    int     i;
+	int	i;
 
-    i = 0;
-    while (str[i] == ' ')
-        i++;
-    if (!str[i])
-        return (1);
-    if(str[i] == '+' || str[i] == '-')
-        i++;
-    while (str[i] != '\0')
-    {
-        if (!ft_isdigit(str[i]))
-                return (1);
-        i++;
-    }
-    return (0);
-}
-
-int verfier_doubl_bonus(char **str, int nbr)
-{
-    int i;
-    int check;
-
-    check = 0;
-    i = 0;
-    while (str[i])
+	i = 0;
+	while (str[i] == ' ')
+		i++;
+	if (!str[i])
+		return (1);
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i] != '\0')
 	{
-        if (ft_atoi(str[i]) == nbr)
-            check++;
-        i++;
+		if (!ft_isdigit(str[i]))
+			return (1);
+		i++;
 	}
-    if (check == 1)
-        return (0);
-    else
-        return (1);
+	return (0);
 }
 
-void liberer_erreurs_bonus(char **split)
+int	verfier_doubl_bonus(char **str, int nbr)
 {
-    int i;
+	int	i;
+	int	check;
 
-    i = 0;
+	check = 0;
+	i = 0;
+	while (str[i])
+	{
+		if (ft_atoi(str[i]) == nbr)
+			check++;
+		i++;
+	}
+	if (check == 1)
+		return (0);
+	else
+		return (1);
+}
+
+void	liberer_erreurs_bonus(char **split)
+{
+	int	i;
+
+	i = 0;
 	while (split[i])
 		free(split[i++]);
 	free(split);
-	write(1,"Error\n",6);
-    exit(1);
+	write(1, "Error\n", 6);
+	exit(1);
 }

@@ -6,46 +6,41 @@
 /*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 12:08:16 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/15 12:45:23 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/03/11 09:42:24 by mez-zahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../commun/commun.h"
 
-static void push(t_noeud **src, t_noeud **dest)
+static void	push(t_noeud **src, t_noeud **dest)
 {
-    t_noeud *first;
+	t_noeud	*first;
 
-    if (!(*src))
-        return ;
-
-    first = *src;
-    *src = first->suivant; 
-
-    if (*src)
-        (*src)->precedent = NULL;
-
-    first->suivant = *dest;
-
-    if (*dest)
-        (*dest)->precedent = first;
-
-    first->precedent = NULL;
-    *dest = first;
-    set_index(*src);
-    set_index(*dest);
+	if (!(*src))
+		return ;
+	first = *src;
+	*src = first->suivant;
+	if (*src)
+		(*src)->precedent = NULL;
+	first->suivant = *dest;
+	if (*dest)
+		(*dest)->precedent = first;
+	first->precedent = NULL;
+	*dest = first;
+	set_index(*src);
+	set_index(*dest);
 }
 
-void pa(t_noeud **a, t_noeud **b, bool afch)
+void	pa(t_noeud **a, t_noeud **b, bool afch)
 {
-    push(b, a);
-    if (!afch)
-        write(1, "pa\n", 3);
+	push(b, a);
+	if (!afch)
+		write(1, "pa\n", 3);
 }
 
-void pb(t_noeud **a, t_noeud **b, bool afch)
+void	pb(t_noeud **a, t_noeud **b, bool afch)
 {
-    push(a, b);
-    if (!afch)
-        write(1, "pb\n", 3);
+	push(a, b);
+	if (!afch)
+		write(1, "pb\n", 3);
 }

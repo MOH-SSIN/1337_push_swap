@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mez-zahi <mez-zahi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:16:51 by mez-zahi          #+#    #+#             */
-/*   Updated: 2025/02/15 17:35:13 by mez-zahi         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:34:44 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**ft_init_commands(char **tab, int novel_taile)
 	if (!new_commands)
 		return (NULL);
 	i = 0;
-	if (tab) 
+	if (tab)
 	{
 		while (i < novel_taile)
 		{
@@ -91,25 +91,20 @@ static void	execute_commands(char **commands, t_noeud **a, t_noeud **b)
 	free(commands);
 }
 
-// void mh()
-// {
-// 	system("leaks ./checker");
-// }
-
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    t_noeud	*a;
+	t_noeud	*a;
 	t_noeud	*b;
 	char	**args;
 	char	**commands;
 
-    if (check_args(argc, argv))
+	if (check_args(argc, argv))
 		return (1);
-    a = NULL;
+	a = NULL;
 	b = NULL;
-    args = concat_arg(argc, argv);
+	args = concat_arg(argc, argv);
 	a = ft_check_creat(&a, args);
-    commands = read_commands();
+	commands = read_commands();
 	if (!commands)
 		return (1);
 	execute_commands(commands, &a, &b);
@@ -117,7 +112,6 @@ int main(int argc, char **argv)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
-	// atexit(mh);
 	free_piles(a, b);
 	return (0);
 }
